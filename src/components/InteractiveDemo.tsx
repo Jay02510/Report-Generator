@@ -122,7 +122,7 @@ ${activeReport.parentScriptKo.closing}
                 onChange={(e) => setCustomInput(e.target.value)}
                 rows={4}
                 className="w-full p-3.5 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-blue-600 font-sans leading-relaxed shadow-2xs"
-                placeholder="Type or paste foreign teacher comments here..."
+                placeholder={t.inputPlaceholder}
               />
             </div>
 
@@ -135,7 +135,7 @@ ${activeReport.parentScriptKo.closing}
               {isGenerating ? (
                 <>
                   <RefreshCw className="w-4 h-4 animate-spin" />
-                  <span>Generating Script...</span>
+                  <span>{t.generatingLabel}</span>
                 </>
               ) : (
                 <>
@@ -147,9 +147,9 @@ ${activeReport.parentScriptKo.closing}
 
             {/* Quick Note for Hakwon Directors */}
             <div className="p-4 rounded-xl border border-slate-200/80 bg-white text-xs text-slate-600 space-y-1 shadow-2xs">
-              <span className="font-bold text-slate-900 block">원장님 참고 안내:</span>
+              <span className="font-bold text-slate-900 block">{t.directorNoteLabel}:</span>
               <p className="leading-relaxed">
-                생성된 대본은 전화 상담 시 바로 전달할 수 있는 세련된 한국어 존댓말 구조로 정제되어 제공됩니다.
+                {t.directorNoteBody}
               </p>
             </div>
           </div>
@@ -220,7 +220,7 @@ ${activeReport.parentScriptKo.closing}
             {/* Line-by-line Parent Consultation Script Sections */}
             <div className="space-y-4 pt-2">
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 border-b border-slate-100 pb-2">
-                학부모 전화 상담 단계별 대본
+                {t.scriptSectionsHeading}
               </h4>
 
               <div className="space-y-3">

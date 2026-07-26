@@ -16,8 +16,8 @@ export const TRANSLATIONS = {
       primaryCta: 'Book a 5-Minute Demo',
       secondaryCta: 'Try Interactive Demo',
       badge: 'Dedicated system for elementary & middle school academies with foreign teachers',
-      iframeTitle: 'Interactive Video Walkthrough',
-      iframeSubtitle: 'See how ChekkiAI reduces 15 hours of weekly report translation down to under 10 minutes.'
+      iframeTitle: 'Live Product Preview',
+      iframeSubtitle: 'See how ChekkiAI transforms raw teacher notes into a ready-to-use bilingual consultation script in seconds.'
     },
     painVsDream: {
       heading: 'Stop wasting Korean staff hours on manual report translation.',
@@ -126,7 +126,12 @@ export const TRANSLATIONS = {
       },
       flaggedAlert: 'Flagged Exception Notice',
       copyScriptBtn: 'Copy Script',
-      copiedText: 'Copied!'
+      copiedText: 'Copied!',
+      directorNoteLabel: 'Note for Directors',
+      directorNoteBody: 'The generated script is refined into polished, phone-ready Korean honorifics.',
+      scriptSectionsHeading: 'Step-by-Step Parent Consultation Script',
+      generatingLabel: 'Generating Script...',
+      inputPlaceholder: 'Type or paste foreign teacher comments here...'
     },
     calculator: {
       heading: 'Calculate how much time and money ChekkiAI saves your academy.',
@@ -138,7 +143,15 @@ export const TRANSLATIONS = {
       annualCostSavings: 'Estimated Annual Cost Savings:',
       hoursUnit: 'hours / week',
       currencyUnit: 'KRW',
-      ctaText: 'Start saving hours on your very first week.'
+      ctaText: 'Start saving hours on your very first week.',
+      sliderSectionTitle: 'Foreign Teacher & Student Scale',
+      sliderSectionSubtitle: 'Adjust the sliders to see estimated savings',
+      teacherRangeLabels: ['1 (small class)', '10 (mid-size academy)', '20+ (large academy)'],
+      studentRangeLabels: ['20', '250', '500+'],
+      disclaimerText: 'Calculation basis: avg. 3.5 hrs/week per foreign teacher spent on report translation and consultation scripting × minimum Korean staff hourly wage.',
+      analysisLabel: 'Productivity Analysis',
+      analysisHeading: 'Estimated Time & Cost Savings',
+      annualSummaryTemplate: 'Approximately {hours} hours of annual translation work is saved, freeing your academy to focus on individual student care and consultation.'
     },
     finalCta: {
       heading: 'Elevate your academy\'s professionalism today.',
@@ -158,7 +171,9 @@ export const TRANSLATIONS = {
       teachersCount: 'Number of Foreign Teachers',
       studentsCount: 'Total Students',
       submitBtn: 'Confirm Demo Request',
-      successMessage: 'Demo request received. Our team will contact you within 2 hours with available time slots.'
+      successTitle: 'Request Received',
+      successMessage: 'Demo request received. Our team will contact you within 2 hours with available time slots.',
+      closeBtn: 'Close'
     },
     footer: {
       companyName: 'ChekkiAI Inc.',
@@ -185,8 +200,8 @@ export const TRANSLATIONS = {
       primaryCta: '5분 맞춤 데모 신청',
       secondaryCta: '실시간 대본 생성 체험',
       badge: '원어민 강사를 보유한 초등·중등 어학원 전용 시스템',
-      iframeTitle: '제품 시연 영상',
-      iframeSubtitle: '주당 15시간 소요되던 리포트 번역 및 상담 준비 시간을 10분 미만으로 단축하는 과정을 확인하세요.'
+      iframeTitle: '실시간 제품 미리보기',
+      iframeSubtitle: '원어민 강사의 한 줄 메모가 즉시 완성도 높은 학부모 상담 대본으로 변환되는 과정을 확인하세요.'
     },
     painVsDream: {
       heading: '수기 번역과 비효율적인 상담 준비 업무를 단번에 해결하세요.',
@@ -295,7 +310,12 @@ export const TRANSLATIONS = {
       },
       flaggedAlert: '감지된 주요 특이사항',
       copyScriptBtn: '대본 클립보드 복사',
-      copiedText: '복사 완료!'
+      copiedText: '복사 완료!',
+      directorNoteLabel: '원장님 참고 안내',
+      directorNoteBody: '생성된 대본은 전화 상담 시 바로 전달할 수 있는 세련된 한국어 존댓말 구조로 정제되어 제공됩니다.',
+      scriptSectionsHeading: '학부모 전화 상담 단계별 대본',
+      generatingLabel: '대본 생성 중...',
+      inputPlaceholder: '원어민 교사의 코멘트를 입력하거나 붙여넣으세요...'
     },
     calculator: {
       heading: '우리 학원의 시간과 비용 절감액을 확인하세요.',
@@ -307,7 +327,15 @@ export const TRANSLATIONS = {
       annualCostSavings: '연간 예상 누적 절감액:',
       hoursUnit: '시간 / 주',
       currencyUnit: '원 (KRW)',
-      ctaText: '첫 주부터 수십 시간의 상담 준비 시간을 절약하세요.'
+      ctaText: '첫 주부터 수십 시간의 상담 준비 시간을 절약하세요.',
+      sliderSectionTitle: '학원 원어민 교사 및 학생 규모',
+      sliderSectionSubtitle: '슬라이더를 조절하여 예상 절감 효과를 확인하세요',
+      teacherRangeLabels: ['1명 (소형반)', '10명 (중형학원)', '20명+ (대형어학원)'],
+      studentRangeLabels: ['20명', '250명', '500명+'],
+      disclaimerText: '산출 기준: 원어민 1인당 주당 리포트 번역 및 상담 대본 작성에 소요되는 평균 3.5시간 x 한국어 상담 인력 최저 인건비 기준.',
+      analysisLabel: '생산성 향상 분석',
+      analysisHeading: '예상 업무 시간 및 비용 절감',
+      annualSummaryTemplate: '연간 약 {hours}시간의 번역 작업 시간이 절감되어, 학원 개별 학생 케어와 상담 본연의 업무에 집중할 수 있습니다.'
     },
     finalCta: {
       heading: '우리 학원의 상담 품격을 한 단계 높이세요.',
@@ -327,7 +355,9 @@ export const TRANSLATIONS = {
       teachersCount: '원어민 교사 수',
       studentsCount: '총 재원생 수',
       submitBtn: '데모 신청 완료',
-      successMessage: '데모 신청이 접수되었습니다. 2시간 이내에 담당자가 연락드려 일정을 확인해 드리겠습니다.'
+      successTitle: '신청이 완료되었습니다',
+      successMessage: '데모 신청이 접수되었습니다. 2시간 이내에 담당자가 연락드려 일정을 확인해 드리겠습니다.',
+      closeBtn: '닫기'
     },
     footer: {
       companyName: '체키에이아이 주식회사 (ChekkiAI Inc.)',

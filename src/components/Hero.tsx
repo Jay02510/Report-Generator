@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Play, ArrowRight, ShieldCheck, Sparkles, MonitorPlay } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 
@@ -11,7 +11,6 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ lang, onOpenDemoModal, onScrollToDemo }) => {
   const t = TRANSLATIONS[lang].hero;
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
     <section className="pt-16 pb-24 bg-white border-b border-slate-200/80">
@@ -61,89 +60,48 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenDemoModal, onScrollToDem
           </div>
         </div>
 
-        {/* Video Walkthrough Container */}
+        {/* Direct Product Preview Container */}
         <div className="mt-14 max-w-5xl mx-auto">
-          <div className="relative aspect-video rounded-2xl border border-slate-200/80 bg-slate-950 text-white shadow-2xl overflow-hidden group">
+          <div className="relative rounded-2xl border border-slate-200/80 bg-slate-950 text-white shadow-2xl overflow-hidden p-6 sm:p-10 flex flex-col justify-between space-y-6">
             
-            {!isVideoPlaying ? (
-              /* Video Container - Cover State */
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/95 to-slate-900/80 flex flex-col justify-between p-8 sm:p-12">
-                
-                {/* Top header bar */}
-                <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
-                  <div className="flex items-center space-x-2">
-                    <MonitorPlay className="w-4 h-4 text-blue-400" />
-                    <span className="text-xs font-semibold text-slate-300 tracking-wide">ChekkiAI Interactive Walkthrough</span>
-                  </div>
-                  <span className="text-[11px] font-medium text-blue-300 bg-blue-900/40 px-3 py-1 rounded-full border border-blue-700/50">
-                    2 Min Tour
-                  </span>
-                </div>
-
-                {/* Center play trigger */}
-                <div className="my-auto flex flex-col items-center justify-center text-center space-y-5">
-                  <button
-                    onClick={() => setIsVideoPlaying(true)}
-                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center transition-transform transform hover:scale-105 shadow-lg"
-                    aria-label="Play video walkthrough"
-                  >
-                    <Play className="w-8 h-8 sm:w-10 sm:h-10 fill-white translate-x-0.5" />
-                  </button>
-                  <div className="space-y-1.5 max-w-lg">
-                    <h3 className="text-base sm:text-lg font-semibold text-slate-100">
-                      {t.iframeTitle}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                      {t.iframeSubtitle}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Footer preview info */}
-                <div className="flex items-center justify-between border-t border-slate-800/80 pt-4 text-xs text-slate-400">
-                  <span className="text-slate-400">Standardized Hakwon Operations Workflow</span>
-                  <span className="text-slate-400">Bilingual Parent Report Automation</span>
-                </div>
+            {/* Top header bar */}
+            <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
+              <div className="flex items-center space-x-2">
+                <Sparkles className="w-4 h-4 text-blue-400" />
+                <span className="text-xs font-semibold text-slate-300 tracking-wide">{t.iframeTitle}</span>
               </div>
-            ) : (
-              /* Active Video State - Clean Interactive Preview Frame */
-              <div className="relative inset-0 w-full h-full bg-slate-950 flex flex-col justify-between p-6 sm:p-8">
-                <div className="flex justify-between items-center text-xs text-slate-400 border-b border-slate-800 pb-3">
-                  <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span className="font-medium text-slate-200">Live Transformation Preview</span>
-                  </div>
-                  <button
-                    onClick={() => setIsVideoPlaying(false)}
-                    className="text-xs text-slate-400 hover:text-white transition-colors"
-                  >
-                    Close Video
-                  </button>
-                </div>
-                
-                {/* Clean Demonstration Card */}
-                <div className="my-auto max-w-xl mx-auto w-full bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4 shadow-xl">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span className="font-semibold text-blue-400">Teacher Input → Parent Script</span>
-                    <span className="bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full text-[11px]">Real-time</span>
-                  </div>
-                  <div className="text-sm font-medium text-slate-200 bg-slate-950 p-3.5 rounded-lg border border-slate-800/60">
-                    "Minjun scored 95/100 on Vocabulary Unit 4, but forgot his workbook twice."
-                  </div>
-                  <div className="p-4 bg-blue-950/40 border border-blue-900/50 rounded-lg text-xs text-blue-200 leading-relaxed">
-                    <span className="font-bold text-blue-400 block mb-1">학부모 상담 대본 변환:</span>
-                    "민준이는 4단원 어휘 평가에서 95점으로 우수한 성적을 기록하였습니다. 다만 이번 주 교재 지참 점검이 필요하여 가정 내 확인을 부탁드립니다."
-                  </div>
-                </div>
+              <span className="text-[11px] font-medium text-blue-300 bg-blue-900/40 px-3 py-1 rounded-full border border-blue-700/50">
+                {lang === 'ko' ? '실시간 미리보기' : 'See It In Action'}
+              </span>
+            </div>
 
-                <div className="flex items-center space-x-3 pt-2">
-                  <div className="flex-1 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                    <div className="w-2/3 h-full bg-blue-600 rounded-full"></div>
-                  </div>
-                  <span className="text-[11px] text-slate-400">01:24 / 02:15</span>
-                </div>
+            {/* Subtitle / Intro */}
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-2xl text-center mx-auto">
+              {t.iframeSubtitle}
+            </p>
+
+            {/* Transformation Demonstration Card */}
+            <div className="max-w-xl mx-auto w-full bg-slate-900 border border-slate-800 rounded-xl p-5 sm:p-6 space-y-4 shadow-xl">
+              <div className="flex items-center justify-between text-xs text-slate-400">
+                <span className="font-semibold text-blue-400">Teacher Input → Parent Script</span>
+                <span className="bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full text-[11px]">Real-time</span>
               </div>
-            )}
+              <div className="text-xs sm:text-sm font-medium text-slate-200 bg-slate-950 p-3.5 rounded-lg border border-slate-800/60 font-mono">
+                "Minjun scored 95/100 on Vocabulary Unit 4, but forgot his workbook twice."
+              </div>
+              <div className="p-4 bg-blue-950/40 border border-blue-900/50 rounded-lg text-xs text-blue-200 leading-relaxed space-y-1">
+                <span className="font-bold text-blue-400 block">학부모 상담 대본 변환 (Korean Consultation Script):</span>
+                <p>
+                  "민준이는 4단원 어휘 평가에서 95점으로 우수한 성적을 기록하였습니다. 다만 이번 주 교재 지참 점검이 필요하여 가정 내 확인을 부탁드립니다."
+                </p>
+              </div>
+            </div>
+
+            {/* Footer preview info */}
+            <div className="flex flex-col sm:flex-row items-center justify-between border-t border-slate-800/80 pt-4 text-xs text-slate-400 gap-2">
+              <span className="text-slate-400">Standardized Hakwon Operations Workflow</span>
+              <span className="text-slate-400">Bilingual Parent Report Automation</span>
+            </div>
 
           </div>
         </div>

@@ -66,7 +66,7 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
             </div>
 
             {/* Bottom Stat Alert */}
-            <div className="mt-8 pt-4 border-t border-slate-100 bg-red-50/50 p-4 rounded-lg border border-red-100/80 flex items-start space-x-3">
+            <div className="mt-8 bg-red-50/50 p-4 rounded-lg border border-red-100/80 flex items-start space-x-3">
               <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
               <p className="text-xs text-red-900 font-medium leading-relaxed">
                 {t.bottleneckAlert}
@@ -118,7 +118,7 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
             </div>
 
             {/* Bottom Stat Alert */}
-            <div className="mt-8 pt-4 border-t border-slate-100 bg-blue-50/50 p-4 rounded-lg border border-blue-100/80 flex items-start space-x-3">
+            <div className="mt-8 bg-blue-50/50 p-4 rounded-lg border border-blue-100/80 flex items-start space-x-3">
               <Zap className="w-4 h-4 text-blue-700 flex-shrink-0 mt-0.5" />
               <p className="text-xs text-blue-900 font-medium leading-relaxed">
                 {t.standardResult}

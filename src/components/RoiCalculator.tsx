@@ -52,10 +52,10 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-slate-900">
-                    학원 원어민 교사 및 학생 규모
+                    {t.sliderSectionTitle}
                   </h3>
                   <p className="text-xs text-slate-500">
-                    슬라이더를 조절하여 예상 절감 효과를 확인하세요
+                    {t.sliderSectionSubtitle}
                   </p>
                 </div>
               </div>
@@ -78,9 +78,9 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
                   className="w-full h-2 bg-slate-100 rounded-lg cursor-pointer accent-blue-700"
                 />
                 <div className="flex justify-between text-[11px] text-slate-400 font-medium">
-                  <span>1명 (소형반)</span>
-                  <span>10명 (중형학원)</span>
-                  <span>20명+ (대형어학원)</span>
+                  {t.teacherRangeLabels.map((lbl, idx) => (
+                    <span key={idx}>{lbl}</span>
+                  ))}
                 </div>
               </div>
 
@@ -103,15 +103,15 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
                   className="w-full h-2 bg-slate-100 rounded-lg cursor-pointer accent-blue-700"
                 />
                 <div className="flex justify-between text-[11px] text-slate-400 font-medium">
-                  <span>20명</span>
-                  <span>250명</span>
-                  <span>500명+</span>
+                  {t.studentRangeLabels.map((lbl, idx) => (
+                    <span key={idx}>{lbl}</span>
+                  ))}
                 </div>
               </div>
             </div>
 
             <p className="text-xs text-slate-500 leading-relaxed pt-4 border-t border-slate-100">
-              * 산출 기준: 원어민 1인당 주당 리포트 번역 및 상담 대본 작성에 소요되는 평균 3.5시간 x 한국어 상담 인력 최저 인건비 기준.
+              * {t.disclaimerText}
             </p>
           </div>
 
@@ -122,10 +122,10 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
               
               <div className="border-b border-slate-200 pb-4">
                 <span className="text-xs font-bold text-blue-700 uppercase tracking-wider block mb-1">
-                  생산성 향상 분석
+                  {t.analysisLabel}
                 </span>
                 <h3 className="text-xl font-extrabold text-slate-900 tracking-tight">
-                  예상 업무 시간 및 비용 절감
+                  {t.analysisHeading}
                 </h3>
               </div>
 
@@ -164,7 +164,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
                   ₩ {formatKrw(annualSavingsKRW)}
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed pt-1">
-                  연간 약 {weeklyHoursSaved * 52}시간의 번역 작업 시간이 절감되어, 학원 개별 학생 케어와 상담 본연의 업무에 집중할 수 있습니다.
+                  {t.annualSummaryTemplate.replace('{hours}', String(weeklyHoursSaved * 52))}
                 </p>
               </div>
 

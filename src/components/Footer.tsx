@@ -31,6 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
 
           {/* Links */}
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium text-zinc-400">
+            {/* TODO: link to real pages once published */}
             {t.links.map((link, i) => (
               <a key={i} href="#" className="hover:text-white transition-colors">
                 {link}

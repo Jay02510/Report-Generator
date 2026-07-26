@@ -221,7 +221,7 @@ export const BookDemoModal: React.FC<BookDemoModalProps> = ({ isOpen, onClose, l
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-zinc-900">
-              신청이 완료되었습니다
+              {t.successTitle}
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 max-w-sm mx-auto leading-relaxed">
               {t.successMessage}
@@ -230,7 +230,7 @@ export const BookDemoModal: React.FC<BookDemoModalProps> = ({ isOpen, onClose, l
               onClick={handleResetAndClose}
               className="px-6 py-2 bg-zinc-900 text-white text-xs font-medium rounded hover:bg-zinc-800 transition-colors"
             >
-              닫기 (Close)
+              {t.closeBtn}
             </button>
           </div>
         )}
