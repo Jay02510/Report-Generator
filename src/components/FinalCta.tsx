@@ -6,9 +6,10 @@ import { TRANSLATIONS } from '../data/translations';
 interface FinalCtaProps {
   lang: Language;
   onOpenDemoModal: () => void;
+  onScrollToDemo: () => void;
 }
 
-export const FinalCta: React.FC<FinalCtaProps> = ({ lang, onOpenDemoModal }) => {
+export const FinalCta: React.FC<FinalCtaProps> = ({ lang, onOpenDemoModal, onScrollToDemo }) => {
   const t = TRANSLATIONS[lang].finalCta;
 
   return (
@@ -42,10 +43,10 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ lang, onOpenDemoModal }) => 
           </button>
 
           <button
-            onClick={onOpenDemoModal}
+            onClick={onScrollToDemo}
             className="w-full sm:w-auto px-8 py-4 bg-white border border-zinc-300 hover:bg-zinc-50 text-zinc-800 font-medium text-sm sm:text-base rounded transition-all flex items-center justify-center space-x-2"
           >
-            <PhoneCall className="w-4 h-4 text-zinc-500" />
+            <Sparkles className="w-4 h-4 text-zinc-500" />
             <span>{t.secondaryBtn}</span>
           </button>
         </div>

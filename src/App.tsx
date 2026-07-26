@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { Language } from './types';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { TrustStrip } from './components/TrustStrip';
 import { PainVsDream } from './components/PainVsDream';
 import { HowItWorks } from './components/HowItWorks';
 import { Features } from './components/Features';
@@ -50,6 +51,9 @@ export default function App() {
           onScrollToDemo={scrollToDemo}
         />
 
+        {/* Trust Social Proof Strip */}
+        <TrustStrip lang={lang} />
+
         {/* 3. Pain vs. Dream Section (2-Column Grid) */}
         <PainVsDream lang={lang} />
 
@@ -75,6 +79,7 @@ export default function App() {
         <FinalCta
           lang={lang}
           onOpenDemoModal={() => setIsDemoModalOpen(true)}
+          onScrollToDemo={scrollToDemo}
         />
       </main>
 

@@ -2,7 +2,7 @@ export const TRANSLATIONS = {
   en: {
     nav: {
       tag: 'Hakwon Operations',
-      bookDemo: 'Book Demo',
+      bookDemo: 'Book a Demo',
       tryDemo: 'Interactive Demo',
       calculator: 'ROI Calculator',
       features: 'Features',
@@ -13,7 +13,7 @@ export const TRANSLATIONS = {
       tagline: 'ACADEMY OPERATIONS, STREAMLINED',
       headline: 'Automate foreign teacher reports and reduce K-Teacher translation workload by 90%.',
       subheadline: 'ChekkiAI instantly transforms simple teacher notes into polished, bilingual parent consultation scripts.',
-      primaryCta: 'Book a 5-Minute Demo',
+      primaryCta: 'Book a Demo',
       secondaryCta: 'Try Interactive Demo',
       badge: 'Dedicated system for elementary & middle school academies with foreign teachers',
       iframeTitle: 'Live Product Preview',
@@ -156,8 +156,8 @@ export const TRANSLATIONS = {
     finalCta: {
       heading: 'Elevate your academy\'s professionalism today.',
       subtext: 'Eliminate translation delays, standardize parent consultation scripts, and free up your staff to focus on student growth.',
-      primaryBtn: 'Start Free Trial',
-      secondaryBtn: 'Schedule Director Walkthrough',
+      primaryBtn: 'Book a Demo',
+      secondaryBtn: 'Try Interactive Demo',
       guarantee: 'No credit card required • 14-day full access • Fast 10-minute setup'
     },
     modal: {
@@ -197,7 +197,7 @@ export const TRANSLATIONS = {
       tagline: '학원 운영의 표준화 및 효율화',
       headline: '원어민 강사 리포트 자동화로 K-Teacher의 번역 업무 시간을 90% 단축하세요.',
       subheadline: 'ChekkiAI는 원어민 교사의 간단한 한 줄 입력 데이터를 정교하고 정중한 한/영 학부모 상담 대본으로 즉시 전환합니다.',
-      primaryCta: '5분 맞춤 데모 신청',
+      primaryCta: '데모 신청',
       secondaryCta: '실시간 대본 생성 체험',
       badge: '원어민 강사를 보유한 초등·중등 어학원 전용 시스템',
       iframeTitle: '실시간 제품 미리보기',
@@ -340,8 +340,8 @@ export const TRANSLATIONS = {
     finalCta: {
       heading: '우리 학원의 상담 품격을 한 단계 높이세요.',
       subtext: '번역 지연을 없애고, 학부모 상담을 표준화하여 학원의 신뢰도와 재원율을 극대화하세요.',
-      primaryBtn: '무료 체험 시작하기',
-      secondaryBtn: '원장님 전용 1:1 안내 신청',
+      primaryBtn: '데모 신청',
+      secondaryBtn: '실시간 대본 생성 체험',
       guarantee: '신용카드 등록 없음 • 14일 전체 기능 무료 • 10분 내 빠른 세팅'
     },
     modal: {

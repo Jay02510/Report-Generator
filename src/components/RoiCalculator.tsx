@@ -170,13 +170,18 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
 
             </div>
 
-            <button
-              onClick={onOpenDemoModal}
-              className="w-full py-3.5 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm rounded-xl shadow-xs transition-all flex items-center justify-center space-x-2"
-            >
-              <span>{t.ctaText}</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            <div className="space-y-2">
+              <p className="text-xs text-center text-slate-500 font-medium">
+                {t.ctaText}
+              </p>
+              <button
+                onClick={onOpenDemoModal}
+                className="w-full py-3.5 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm rounded-xl shadow-xs transition-all flex items-center justify-center space-x-2"
+              >
+                <span>{TRANSLATIONS[lang].nav.bookDemo}</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
 
           </div>
 

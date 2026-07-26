@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 
@@ -51,12 +51,6 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenDemoModal, onScrollToDem
               <Sparkles className="w-4 h-4 text-slate-500" />
               <span>{t.secondaryCta}</span>
             </button>
-          </div>
-
-          {/* Trust Social Proof Badge */}
-          <div className="pt-4 flex items-center justify-center space-x-2 text-xs sm:text-sm font-medium text-slate-600 bg-slate-50 border border-slate-200/80 px-4 py-2 rounded-full shadow-xs">
-            <ShieldCheck className="w-4 h-4 text-blue-700 flex-shrink-0" />
-            <span>{t.badge}</span>
           </div>
         </div>
 
