@@ -1,0 +1,6 @@
+{
+  "name": "ChekkiAI",
+  "description": "Streamlined operational platform for South Korean English Academy (Hakwon) Directors to automate foreign teacher reports and bilingual parent consultation scripts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
