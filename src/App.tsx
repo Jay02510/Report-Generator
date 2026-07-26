@@ -33,7 +33,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-blue-100 selection:text-blue-900">
+    <div className="min-h-screen bg-[#0c1a2e] text-[#FDFAF5] font-body selection:bg-orange-500/30 selection:text-orange-200">
       
       {/* 1. Global Navigation */}
       <Navbar

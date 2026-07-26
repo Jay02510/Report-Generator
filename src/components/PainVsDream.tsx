@@ -11,15 +11,15 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
   const t = TRANSLATIONS[lang].painVsDream;
 
   return (
-    <section className="py-24 bg-slate-50/60 border-b border-slate-200/80" id="pain-vs-standard">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-32 bg-[#0c1a2e] border-b border-white/10" id="pain-vs-standard">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* Header - No Floating Pill Badge */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#FDFAF5] font-display tracking-tight">
             {t.heading}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-body">
             {t.subheading}
           </p>
         </div>
@@ -28,18 +28,24 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
           {/* Column 1: The Bottleneck */}
-          <div className="bg-white border border-slate-200/80 rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
+          <div className="bg-[#0F1014] border border-white/10 rounded-2xl p-8 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] relative">
+            
+            {/* Notebook Annotation */}
+            <div className="absolute -top-3 left-6 bg-pink-500/20 border border-pink-500/40 px-3 py-0.5 rounded-full text-xs font-handwritten text-pink-300 handwriting-tilt">
+              ❌ 15+ Hours Lost Weekly
+            </div>
+
             <div>
               {/* Card Header */}
-              <div className="flex items-center space-x-3 pb-6 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-lg bg-red-50 border border-red-200/60 flex items-center justify-center text-red-600 font-bold">
+              <div className="flex items-center space-x-3 pb-6 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 font-bold">
                   <XCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 tracking-tight">
+                  <h3 className="text-lg font-bold text-[#FDFAF5] font-display tracking-tight">
                     {t.bottleneckTitle}
                   </h3>
-                  <p className="text-xs text-slate-500 font-medium">
+                  <p className="text-xs text-pink-300 font-medium">
                     {t.bottleneckSubtitle}
                   </p>
                 </div>
@@ -49,14 +55,14 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
               <div className="mt-6 space-y-6">
                 {t.bottleneckPoints.map((point, index) => (
                   <div key={index} className="flex items-start space-x-3.5">
-                    <div className="w-5 h-5 mt-0.5 rounded-full bg-red-100/80 text-red-700 flex items-center justify-center flex-shrink-0 text-xs font-bold">
+                    <div className="w-5 h-5 mt-0.5 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center flex-shrink-0 text-xs font-bold">
                       ✕
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-slate-900">
+                      <h4 className="text-sm font-semibold text-[#FDFAF5] font-display">
                         {point.title}
                       </h4>
-                      <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      <p className="mt-1 text-xs sm:text-sm text-slate-300 leading-relaxed font-body">
                         {point.desc}
                       </p>
                     </div>
@@ -66,32 +72,37 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
             </div>
 
             {/* Bottom Stat Alert */}
-            <div className="mt-8 bg-red-50/50 p-4 rounded-lg border border-red-100/80 flex items-start space-x-3">
-              <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-              <p className="text-xs text-red-900 font-medium leading-relaxed">
+            <div className="mt-8 bg-pink-950/20 p-4 rounded-xl border border-pink-500/30 flex items-start space-x-3">
+              <AlertTriangle className="w-4 h-4 text-pink-400 flex-shrink-0 mt-0.5" />
+              <p className="text-xs text-pink-200 font-medium leading-relaxed font-body">
                 {t.bottleneckAlert}
               </p>
             </div>
           </div>
 
           {/* Column 2: ChekkiAI System */}
-          <div className="bg-white border-2 border-blue-600/30 rounded-xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden shadow-sm">
+          <div className="bg-[#0F1014] border-2 border-[#F97316]/50 rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
             {/* Corner Badge */}
-            <div className="absolute top-0 right-0 bg-blue-700 text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-bl-lg">
+            <div className="absolute top-0 right-0 bg-[#F97316] text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-bl-xl font-display">
               Standardized
+            </div>
+
+            {/* Notebook Annotation */}
+            <div className="absolute -top-3 left-6 bg-orange-500/20 border border-orange-500/40 px-3 py-0.5 rounded-full text-xs font-handwritten text-orange-300 handwriting-tilt-right">
+              ✨ 90% Time Saved
             </div>
 
             <div>
               {/* Card Header */}
-              <div className="flex items-center space-x-3 pb-6 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200/60 flex items-center justify-center text-blue-700 font-bold">
+              <div className="flex items-center space-x-3 pb-6 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-[#F97316] font-bold">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 tracking-tight">
+                  <h3 className="text-lg font-bold text-[#FDFAF5] font-display tracking-tight">
                     {t.standardTitle}
                   </h3>
-                  <p className="text-xs text-blue-700 font-medium">
+                  <p className="text-xs text-orange-400 font-medium">
                     {t.standardSubtitle}
                   </p>
                 </div>
@@ -101,14 +112,14 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
               <div className="mt-6 space-y-6">
                 {t.standardPoints.map((point, index) => (
                   <div key={index} className="flex items-start space-x-3.5">
-                    <div className="w-5 h-5 mt-0.5 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center flex-shrink-0 text-xs font-bold">
+                    <div className="w-5 h-5 mt-0.5 rounded-full bg-orange-500/20 text-[#F97316] flex items-center justify-center flex-shrink-0 text-xs font-bold">
                       ✓
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-slate-900">
+                      <h4 className="text-sm font-semibold text-[#FDFAF5] font-display">
                         {point.title}
                       </h4>
-                      <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      <p className="mt-1 text-xs sm:text-sm text-slate-300 leading-relaxed font-body">
                         {point.desc}
                       </p>
                     </div>
@@ -118,9 +129,9 @@ export const PainVsDream: React.FC<PainVsDreamProps> = ({ lang }) => {
             </div>
 
             {/* Bottom Stat Alert */}
-            <div className="mt-8 bg-blue-50/50 p-4 rounded-lg border border-blue-100/80 flex items-start space-x-3">
-              <Zap className="w-4 h-4 text-blue-700 flex-shrink-0 mt-0.5" />
-              <p className="text-xs text-blue-900 font-medium leading-relaxed">
+            <div className="mt-8 bg-orange-950/30 p-4 rounded-xl border border-orange-500/30 flex items-start space-x-3">
+              <Zap className="w-4 h-4 text-[#F97316] flex-shrink-0 mt-0.5" />
+              <p className="text-xs text-orange-200 font-medium leading-relaxed font-body">
                 {t.standardResult}
               </p>
             </div>

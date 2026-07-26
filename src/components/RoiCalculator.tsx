@@ -26,45 +26,45 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
   };
 
   return (
-    <section className="py-24 bg-slate-50/60 border-b border-slate-200/80" id="calculator">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-32 bg-[#0c1a2e] border-b border-white/10" id="calculator">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* Header - No Floating Pill Badge */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#FDFAF5] font-display tracking-tight">
             {t.heading}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-body">
             {t.subheading}
           </p>
         </div>
 
         {/* Interactive Calculator Container */}
-        <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch shadow-xs">
+        <div className="bg-[#0F1014] border border-white/10 rounded-2xl p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)]">
           
           {/* Controls Column (6 cols) */}
           <div className="lg:col-span-6 space-y-8 flex flex-col justify-between">
             
             <div className="space-y-6">
-              <div className="flex items-center space-x-3 pb-4 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200/60 flex items-center justify-center text-blue-700">
+              <div className="flex items-center space-x-3 pb-4 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-[#F97316]">
                   <Calculator className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-slate-900">
+                  <h3 className="text-base font-bold text-[#FDFAF5] font-display">
                     {t.sliderSectionTitle}
                   </h3>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-slate-400 font-body">
                     {t.sliderSectionSubtitle}
                   </p>
                 </div>
               </div>
 
               {/* Slider 1: Foreign Teachers */}
-              <div className="space-y-3">
-                <div className="flex justify-between items-center text-sm font-bold text-slate-900">
+              <div className="space-y-3 font-body">
+                <div className="flex justify-between items-center text-sm font-bold text-[#FDFAF5]">
                   <label htmlFor="teachers-slider">{t.foreignTeachersLabel}</label>
-                  <span className="text-sm font-extrabold text-blue-700 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full">
+                  <span className="text-sm font-extrabold text-[#F97316] px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-full font-display">
                     {foreignTeachers} 명
                   </span>
                 </div>
@@ -75,7 +75,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
                   max={20}
                   value={foreignTeachers}
                   onChange={(e) => setForeignTeachers(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-100 rounded-lg cursor-pointer accent-blue-700"
+                  className="w-full h-2 bg-[#050505] rounded-lg cursor-pointer accent-[#F97316]"
                 />
                 <div className="flex justify-between text-[11px] text-slate-400 font-medium">
                   {t.teacherRangeLabels.map((lbl, idx) => (
@@ -85,10 +85,10 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
               </div>
 
               {/* Slider 2: Student Count */}
-              <div className="space-y-3">
-                <div className="flex justify-between items-center text-sm font-bold text-slate-900">
+              <div className="space-y-3 font-body">
+                <div className="flex justify-between items-center text-sm font-bold text-[#FDFAF5]">
                   <label htmlFor="students-slider">{t.studentCountLabel}</label>
-                  <span className="text-sm font-extrabold text-slate-900 px-3 py-1 bg-slate-100 border border-slate-200 rounded-full">
+                  <span className="text-sm font-extrabold text-[#FDFAF5] px-3 py-1 bg-[#050505] border border-white/10 rounded-full font-display">
                     {students} 명
                   </span>
                 </div>
@@ -100,7 +100,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
                   step={10}
                   value={students}
                   onChange={(e) => setStudents(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-100 rounded-lg cursor-pointer accent-blue-700"
+                  className="w-full h-2 bg-[#050505] rounded-lg cursor-pointer accent-[#F97316]"
                 />
                 <div className="flex justify-between text-[11px] text-slate-400 font-medium">
                   {t.studentRangeLabels.map((lbl, idx) => (
@@ -110,21 +110,26 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
               </div>
             </div>
 
-            <p className="text-xs text-slate-500 leading-relaxed pt-4 border-t border-slate-100">
+            <p className="text-xs text-slate-400 leading-relaxed pt-4 border-t border-white/10 font-body">
               * {t.disclaimerText}
             </p>
           </div>
 
-          {/* Metrics Results Display (6 cols) - Clean Slate/Light Box */}
-          <div className="lg:col-span-6 bg-slate-50 border border-slate-200/80 rounded-xl p-6 sm:p-8 space-y-6 flex flex-col justify-between">
+          {/* Metrics Results Display (6 cols) */}
+          <div className="lg:col-span-6 bg-[#081220] border border-white/10 rounded-2xl p-8 space-y-6 flex flex-col justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05)] relative">
             
+            {/* Notebook Annotation */}
+            <div className="absolute -top-3 right-6 bg-orange-500/20 border border-orange-500/40 px-3 py-0.5 rounded-full text-xs font-handwritten text-orange-300 handwriting-tilt">
+              💰 Real ROI Calculation
+            </div>
+
             <div className="space-y-6">
               
-              <div className="border-b border-slate-200 pb-4">
-                <span className="text-xs font-bold text-blue-700 uppercase tracking-wider block mb-1">
+              <div className="border-b border-white/10 pb-4">
+                <span className="text-xs font-bold text-orange-400 uppercase tracking-wider block mb-1 font-display">
                   {t.analysisLabel}
                 </span>
-                <h3 className="text-xl font-extrabold text-slate-900 tracking-tight">
+                <h3 className="text-xl font-extrabold text-[#FDFAF5] font-display tracking-tight">
                   {t.analysisHeading}
                 </h3>
               </div>
@@ -132,23 +137,23 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 
                 {/* Metric 1: Hours */}
-                <div className="p-4 bg-white border border-slate-200/80 rounded-xl space-y-1 shadow-2xs">
-                  <div className="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
-                    <Clock className="w-4 h-4 text-blue-700" />
+                <div className="p-4 bg-[#050505] border border-white/10 rounded-xl space-y-1">
+                  <div className="flex items-center space-x-1.5 text-xs text-slate-400 font-medium font-body">
+                    <Clock className="w-4 h-4 text-orange-400" />
                     <span>{t.weeklyTranslationHours}</span>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                    {weeklyHoursSaved} <span className="text-xs font-normal text-slate-500">{t.hoursUnit}</span>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#FDFAF5] font-display tracking-tight">
+                    {weeklyHoursSaved} <span className="text-xs font-normal text-slate-400">{t.hoursUnit}</span>
                   </div>
                 </div>
 
                 {/* Metric 2: Monthly KRW */}
-                <div className="p-4 bg-white border border-slate-200/80 rounded-xl space-y-1 shadow-2xs">
-                  <div className="flex items-center space-x-1.5 text-xs text-slate-500 font-medium">
-                    <TrendingUp className="w-4 h-4 text-blue-700" />
+                <div className="p-4 bg-[#050505] border border-white/10 rounded-xl space-y-1">
+                  <div className="flex items-center space-x-1.5 text-xs text-slate-400 font-medium font-body">
+                    <TrendingUp className="w-4 h-4 text-[#F97316]" />
                     <span>{t.monthlyCostSavings}</span>
                   </div>
-                  <div className="text-xl sm:text-2xl font-extrabold text-blue-700 tracking-tight">
+                  <div className="text-xl sm:text-2xl font-extrabold text-[#F97316] font-display tracking-tight">
                     ₩ {formatKrw(monthlySavingsKRW)}
                   </div>
                 </div>
@@ -156,14 +161,14 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
               </div>
 
               {/* Hero Metric: Annual Savings */}
-              <div className="p-5 bg-blue-50/70 border border-blue-200/80 rounded-xl space-y-1.5">
-                <div className="text-xs text-blue-800 font-bold uppercase tracking-wider">
+              <div className="p-5 bg-orange-950/20 border border-orange-500/40 rounded-xl space-y-1.5">
+                <div className="text-xs text-orange-400 font-bold uppercase tracking-wider font-display">
                   {t.annualCostSavings}
                 </div>
-                <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <div className="text-3xl sm:text-4xl font-extrabold text-[#FDFAF5] font-display tracking-tight">
                   ₩ {formatKrw(annualSavingsKRW)}
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed pt-1">
+                <p className="text-xs text-slate-300 leading-relaxed pt-1 font-body">
                   {t.annualSummaryTemplate.replace('{hours}', String(weeklyHoursSaved * 52))}
                 </p>
               </div>
@@ -171,12 +176,12 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ lang, onOpenDemoMo
             </div>
 
             <div className="space-y-2">
-              <p className="text-xs text-center text-slate-500 font-medium">
+              <p className="text-xs text-center text-slate-400 font-medium font-body">
                 {t.ctaText}
               </p>
               <button
                 onClick={onOpenDemoModal}
-                className="w-full py-3.5 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm rounded-xl shadow-xs transition-all flex items-center justify-center space-x-2"
+                className="w-full py-4 bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-sm rounded-full shadow-[0_8px_32px_rgba(249,115,22,0.15)] hover:shadow-[0_12px_40px_rgba(249,115,22,0.25)] hover:scale-[1.02] transition-all flex items-center justify-center space-x-2"
               >
                 <span>{TRANSLATIONS[lang].nav.bookDemo}</span>
                 <ArrowRight className="w-4 h-4" />

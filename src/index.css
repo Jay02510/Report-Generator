@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', 'Fraunces', sans-serif;
+    --font-body: 'Nunito', 'Noto Sans KR', sans-serif;
+    --font-handwritten: 'Patrick Hand', cursive;
+  }
+
+  body {
+    font-family: 'Nunito', 'Noto Sans KR', sans-serif;
+    background-color: #0c1a2e;
+    color: #FDFAF5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Fraunces', sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Fraunces', sans-serif;
+}
+
+.font-body {
+  font-family: 'Nunito', 'Noto Sans KR', sans-serif;
+}
+
+.font-handwritten {
+  font-family: 'Patrick Hand', cursive;
+}
+
+/* Handwriting Offset Rules from design.md */
+.handwriting-tilt {
+  display: inline-block;
+  transform: rotate(-1.5deg);
+}
+
+.handwriting-tilt-right {
+  display: inline-block;
+  transform: rotate(1.8deg);
+}
+
+/* Notebook grid pattern for tactile feel */
+.bg-notebook-pattern {
+  background-image: radial-gradient(rgba(253, 250, 245, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
