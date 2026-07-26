@@ -36,7 +36,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ lang, onOpenDemoModal, onScr
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={onOpenDemoModal}
-            className="w-full sm:w-auto px-8 py-4 bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-sm sm:text-base rounded-full shadow-[0_8px_32px_rgba(249,115,22,0.15)] hover:shadow-[0_12px_40px_rgba(249,115,22,0.25)] hover:scale-[1.02] transition-all flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto px-7 py-3.5 bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-sm sm:text-base rounded-[24px] hover:shadow-[0_8px_32px_rgba(249,115,22,0.15)] hover:scale-[1.02] transition-all flex items-center justify-center space-x-2"
           >
             <span>{t.primaryBtn}</span>
             <ArrowRight className="w-4 h-4" />
@@ -44,7 +44,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ lang, onOpenDemoModal, onScr
 
           <button
             onClick={onScrollToDemo}
-            className="w-full sm:w-auto px-8 py-4 bg-[#0F1014] border border-white/10 hover:border-white/20 text-[#FDFAF5] font-semibold text-sm sm:text-base rounded-full transition-all flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto px-7 py-3.5 bg-[#0F1014] border border-white/10 hover:border-white/20 text-[#FDFAF5] font-semibold text-sm sm:text-base rounded-[24px] transition-all flex items-center justify-center space-x-2"
           >
             <Sparkles className="w-4 h-4 text-orange-400" />
             <span>{t.secondaryBtn}</span>

@@ -64,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onToggleLang, onOpenDemoMo
           {/* Primary CTA */}
           <button
             onClick={onOpenDemoModal}
-            className="px-5 py-2 bg-[#F97316] hover:bg-[#EA580C] text-white text-xs sm:text-sm font-bold rounded-full transition-all flex items-center space-x-1.5 shadow-[0_4px_16px_rgba(249,115,22,0.25)] hover:shadow-[0_6px_24px_rgba(249,115,22,0.35)] hover:scale-[1.02]"
+            className="px-5 py-2 bg-[#F97316] hover:bg-[#EA580C] text-white text-xs sm:text-sm font-bold rounded-[24px] transition-all flex items-center space-x-1.5 hover:shadow-[0_8px_32px_rgba(249,115,22,0.15)] hover:scale-[1.02]"
           >
             <PhoneCall className="w-3.5 h-3.5" />
             <span>{t.bookDemo}</span>

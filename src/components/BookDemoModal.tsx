@@ -207,7 +207,7 @@ export const BookDemoModal: React.FC<BookDemoModalProps> = ({ isOpen, onClose, l
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-sm rounded-full shadow-[0_8px_32px_rgba(249,115,22,0.15)] transition-all mt-4"
+                className="w-full px-7 py-3.5 bg-[#F97316] hover:bg-[#EA580C] text-white font-bold text-sm rounded-[24px] hover:shadow-[0_8px_32px_rgba(249,115,22,0.15)] hover:scale-[1.02] transition-all mt-4"
               >
                 {t.submitBtn}
               </button>
@@ -228,7 +228,7 @@ export const BookDemoModal: React.FC<BookDemoModalProps> = ({ isOpen, onClose, l
             </p>
             <button
               onClick={handleResetAndClose}
-              className="px-6 py-2.5 bg-[#F97316] text-white text-xs font-bold rounded-full hover:bg-[#EA580C] transition-colors"
+              className="px-6 py-2.5 bg-[#F97316] text-white text-xs font-bold rounded-[24px] hover:bg-[#EA580C] transition-colors hover:shadow-[0_8px_32px_rgba(249,115,22,0.15)]"
             >
               {t.closeBtn}
             </button>
